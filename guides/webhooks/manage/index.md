@@ -21,18 +21,17 @@ next_page_id: webhooks/manage/list-all
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/manage/index.md
+fullyTranslated: true
 ---
-# Manage Webhooks
+# Webhookの管理
 
-The Box API allows for programmatic creation and deletion of webhooks.
+Box APIを使用すると、プログラムによってWebhookを作成および削除できます。
 
-<Message type='warning'>
+<Message type="warning">
 
-# Scopes & Permissions
+# スコープと権限
 
-Please ensure you have the "Manage webhooks" application scope enabled in the
-configuration tab of the [developer console][console] for your application or
-you will receive a `403` error when trying to make API calls.
+アプリケーションの[開発者コンソール][console]の構成タブで、\[webhookを管理]アプリケーションスコープが有効になっていることを確認してください。これが有効になっていない場合、API呼び出しを実行しようとすると`403`エラーが返されます。
 
 </Message>
 

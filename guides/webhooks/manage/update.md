@@ -22,22 +22,21 @@ next_page_id: webhooks/manage/delete
 previous_page_id: webhooks/manage/for-folder
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/manage/update.md
+fullyTranslated: true
 ---
-# Update Webhook
+# Webhookの更新
 
-To update a webhook you will need to provide the
-API with the ID of the webhook to change, and the new `target` file or folder,
-as well as an optional new `address` to send webhooks to.
+Webhookを更新するには、変更するWebhookのID、新しい`target`ファイルまたはフォルダ、およびWebhookの送信先の新しい`address`(省略可)をAPIに渡す必要があります。
 
-<Samples id='put_webhooks_id'>
+<Samples id="put_webhooks_id">
 
 </Samples>
 
-<Message type='notice'>
+<Message type="notice">
 
 # Webhook ID
 
-To find the ID of the webhook, use the [List all webhooks][1] endpoint.
+WebhookのIDを調べるには、[すべてのWebhookのリストを取得][1]エンドポイントを使用します。
 
 </Message>
 

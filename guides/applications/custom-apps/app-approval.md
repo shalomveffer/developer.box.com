@@ -19,96 +19,82 @@ next_page_id: ''
 previous_page_id: applications/custom-apps/app-token-setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/app-approval.md
+fullyTranslated: true
 ---
-# App Approval
+# アプリの承認
 
-Custom App that are configured with [JWT][jwt] or [App Token][app-token]
-authentication will need to be authorized within the Box enterprise by the
-enterprise Admin User before it can be used.
+[JWT][jwt]または[アプリトークン][app-token]認証で構成されたカスタムアプリは、使用する前に、Boxに登録されている会社内で会社の管理者ユーザーが承認する必要があります。
 
-## Approval Notifications
+## 承認の通知
 
-A semi-automated process for app approval is available in the developer console.
+アプリの承認のための半自動プロセスは、開発者コンソールで利用できます。
 
-Go to your application in the [developer console][devconsole], select the
-"General" link from the left sidebar in your application
-and scroll down to the "App Authorization" section.
+[開発者コンソール][devconsole]でアプリケーションに移動し、アプリケーションの左側のサイドバーで \[一般] リンクを選択して、\[アプリの承認] セクションまで下にスクロールします。
 
 <ImageFrame border width="400" center>
 
-![Add and Manage keys](../images/app-authorization.png)
+![キーの追加と管理](../images/app-authorization.png)
 
 </ImageFrame>
 
-By submitting the application for approval it will send an email to your
-enterprise admin to have them enable the application. More information on this
-process is available in our [community article on app authorization][app-auth].
+承認用にアプリケーションを送信すると、会社の管理者にはアプリケーションを有効にするようメールが送信されます。このプロセスの詳細については、[アプリの承認に関するコミュニティ記事][app-auth]を参照してください。
 
-## Manual Approval
+## 手動による承認
 
-If the above process is not an option, the following are instructions on how to
-manually approve the application.
+上記のプロセスを利用できない場合は、以下の手順に従って手動でアプリケーションを承認してください。
 
-### As developer
+### 開発者の場合
 
-As the developer, head over to the application in the [developer
-console][devconsole], click on "Configuration" in the left sidebar, copy the
-app's client ID within the "OAuth 2.0 Credentials" section and provide this to
-your admin.
+開発者の場合は、[開発者コンソール][devconsole]でアプリケーションに移動し、左側のサイドバーの \[構成] をクリックし、\[OAuth 2.0資格情報] セクション内にあるアプリのクライアントIDをコピーして管理者に提出します。
 
 <Message>
 
-# Finding a Box Admin
+# Box管理者の確認方法
 
-If you don't know your enterprise admin, go to the Box [account
-settings][settings] page  and scroll to the bottom. If an admin contact is set
-you should see contact  information under "Admin Contact".
+自分の会社の管理者がわからない場合は、Boxの[アカウント設定][settings]ページに移動し、一番下までスクロールしてください。管理者の連絡先が設定されている場合は、\[管理者の連絡先]の下に連絡先情報が表示されます。
 
 </Message>
 
-### As admin
+### 管理者の場合
 
-As the admin, head over to the [admin console][adminconsole], select the "Apps"
-navigation item in the left sidebar (1) and then click the "Custom Apps" tab at
-the top (2).
+管理者の場合は、[管理コンソール][adminconsole]に移動し、左側のサイドバーの \[アプリ] ナビゲーション項目を選択し (1)、上部にある \[カスタムアプリ] タブをクリックします (2)。
 
 <ImageFrame border center>
 
-![Apps tab](../images/apps.png)
+![\[アプリ\]タブ](../images/apps.png)
 
 </ImageFrame>
 
-On the "Custom Apps" page click on the "+" button at the top right to authorize
-a new app.
+\[カスタムアプリ] ページで、右上にある \[+] ボタンをクリックして新しいアプリを承認します。
 
 <ImageFrame border center>
 
-![Custom Apps section](../images/custom-apps.png)
+![\[カスタムアプリケーション\]セクション](../images/custom-apps.png)
 
 </ImageFrame>
 
-In the popup that appears, enter the client ID for the application that the
-developer provided from the app.
+表示されるポップアップで、開発者によってアプリから提供されたアプリケーションのクライアントIDを入力します。
 
-## Re-authorization on changes
+## 変更の再承認
 
-When the application's scopes or access level change the application needs to be
-re-authorized. Repeat the process above and request a new Access Token for the
-new changes to take effect.
+アプリケーションのスコープまたはアクセスレベルが変更された場合は、アプリケーションを再承認する必要があります。新しい変更を有効にするには、上記のプロセスを繰り返して新しいアクセストークンをリクエストしてください。
 
-In the same section where the application was initially authorized, the admin
-can re-authorize the same application by clicking on the ellipses to the right
-of the application name and selecting "Reauthorize App".
+管理者は、アプリケーションが最初に承認されたのと同じセクションで、アプリケーション名の右側にある楕円をクリックし、\[アプリを再承認] を選択することで、同じアプリケーションを再承認できます。
 
 <ImageFrame border center>
 
-![Re-authorize app](../images/app-reauthorize.png)
+![アプリの再承認](../images/app-reauthorize.png)
 
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
+
 [settings]: https://app.box.com/account
+
 [adminconsole]: https://app.box.com/master/settings/custom
+
 [jwt]: g://authentication/jwt
+
 [app-token]: g://authentication/app-token
+
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
